@@ -1,46 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 .container {
     margin: 0 auto;
+    max-width: 800px;
 }
 
 .main {
+    width: 80%;
     padding: 25px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 700px;
     background-color: #ffc300;
     border-radius: 5px;
-
+    background-image: url("leather.png");
 }
 
 .equalizerAnimation {
     width: 600px;
     height: 300px;
     background-color: black;
+    background-image: url("checkered-light-emboss.png");
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     padding: 20px;
+    width: 100%;
 }
 
-.btn {
-    width: 400px;
+.control-info {
+    margin: 0 0 5px;
+}
+
+.controls {
+    width: 80%;;
     display: flex;
+    flex-direction: column;
     margin-top: 5px;
     justify-content: space-between;
-    border: #533e0d dashed 2px;
     padding: 10px;
+    border: #533e0d dashed 6px;
 }
 
 .color {
     width: 50px;
+    background-image: url("transparent-square-tiles.png");
 }
 
 .color-one {
@@ -83,14 +94,32 @@ p {
     font-size: 21px;
     margin: 5px 0 0;
     font-style: italic;
+    font-family: Square Peg, Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nice-gentleman {
+    margin-top: 20px;
 }
 
 .btns {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
     padding: 0.5em 2em;
     color: black;
     text-transform: uppercase;
     font-weight: bold;
-    border: 3px solid black;
+    border: 3px solid #533e0d;
+    text-align: center;
+    background-image: url("leather.png");
+    font-family: Square Peg, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
 
 #play-btn:hover,
@@ -100,8 +129,12 @@ p {
 #color-btn:hover,
 #color-btn:active {
     color: #ffc300;
-    border: 3px solid #a0bded;
-    box-shadow: 2px 2px #888888
+    border: 3px solid #191970;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
 }
 
 #play-btn {
@@ -119,4 +152,22 @@ p {
 #color-btn:hover,
 #color-btn:active {
     color: #0000ff;
+}
+
+@media(max-width: 500px) {
+    .container {
+        width: 500px;
+    }
+
+    .main {
+        width: 80%;
+    }
+
+    .equalizerAnimation {
+        width: 80%;
+    }
+
+    .color {
+        width: 10%;
+    }
 }
